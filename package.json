@@ -1,11 +1,21 @@
 {
   "name": "vue-console-log",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-console-log.js",
+      "require": "./dist/vue-console-log.umd.js"
+    }
+  },
+  "main": "./dist/vue-console-log.umd.js",
+  "module": "./dist/vue-console-log.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "dev": "vite --open",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
